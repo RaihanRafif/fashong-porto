@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const pinecone = new Pinecone({ apiKey: process.env.PINECONE_API_KEY });
-const pineconeIndex = pinecone.index(process.env.PINECONE_INDEX_NAME || "revostyle-search");
+const pineconeIndex = pinecone.index(process.env.PINECONE_INDEX_NAME || "fashong");
 const embeddingModel = "text-embedding-3-small";
 
 const getAllProducts = async (req, res) => {
@@ -65,6 +65,7 @@ const semanticSearch = async (req, res) => {
         const embeddingResponse = await openai.embeddings.create({
             model: embeddingModel,
             input: query,
+            dimensions: 1024,
         });
         const queryVector = embeddingResponse.data[0].embedding;
 
@@ -201,6 +202,7 @@ const visualSearch = async (req, res) => {
         const embeddingResponse = await openai.embeddings.create({
             model: embeddingModel, // "text-embedding-3-small"
             input: imageDescription,
+            dimensions: 1024,
         });
         const queryVector = embeddingResponse.data[0].embedding;
 
@@ -229,38 +231,130 @@ const visualSearch = async (req, res) => {
 
 const getProductById = async (req, res) => {
     try {
-      // 1. Ambil ID dari parameter URL (misal: /api/products/clxyz123)
-      const { id } = req.params;
-  
-      // 2. Cari produk di database menggunakan `findUnique` dari Prisma
-      const product = await prisma.product.findUnique({
-        where: {
-          id: id, // Cari berdasarkan ID yang diberikan
-        },
-        include: {
-          category: true, // Selalu sertakan data relasi yang relevan
-        },
-      });
-  
-      // 3. Jika produk tidak ditemukan, kirim respons 404 (Not Found)
-      if (!product) {
-        return res.status(404).json({ message: 'Produk tidak ditemukan.' });
-      }
-  
-      // 4. Jika produk ditemukan, kirim datanya dengan status 200 (OK)
-      res.status(200).json(product);
-  
+        // 1. Ambil ID dari parameter URL (misal: /api/products/clxyz123)
+        const { id } = req.params;
+
+        // 2. Cari produk di database menggunakan `findUnique` dari Prisma
+        const product = await prisma.product.findUnique({
+            where: {
+                id: id, // Cari berdasarkan ID yang diberikan
+            },
+            include: {
+                category: true, // Selalu sertakan data relasi yang relevan
+            },
+        });
+
+        // 3. Jika produk tidak ditemukan, kirim respons 404 (Not Found)
+        if (!product) {
+            return res.status(404).json({ message: 'Produk tidak ditemukan.' });
+        }
+
+        // 4. Jika produk ditemukan, kirim datanya dengan status 200 (OK)
+        res.status(200).json(product);
+
     } catch (error) {
-      // 5. Tangani kemungkinan error server lainnya
-      console.error("Error saat mengambil produk by ID:", error);
-      res.status(500).json({ message: "Terjadi kesalahan pada server." });
+        // 5. Tangani kemungkinan error server lainnya
+        console.error("Error saat mengambil produk by ID:", error);
+        res.status(500).json({ message: "Terjadi kesalahan pada server." });
     }
-  };
+};
+
+const aiChatHandler = async (req, res) => {
+    try {
+        // 1. TERIMA SELURUH RIWAYAT PERCAKAPAN
+        const { history } = req.body;
+        if (!history || history.length === 0) {
+            return res.status(400).json({ reply: "History cannot be empty." });
+        }
+
+        // Ambil pesan terakhir dari pengguna untuk proses Retrieval
+        const latestUserMessage = history[history.length - 1].text;
+
+        // --- RETRIEVAL PHASE (Tetap menggunakan pesan terakhir) ---
+        console.log(`[RAG] 1. Retrieval: Mencari konteks untuk query "${latestUserMessage}"`);
+        const queryEmbedding = await openai.embeddings.create({
+            model: embeddingModel,
+            input: latestUserMessage,
+            dimensions: 1024
+        });
+        const queryVector = queryEmbedding.data[0].embedding;
+
+        const searchResults = await pineconeIndex.query({
+            vector: queryVector,
+            topK: 4,
+        });
+
+        const productIds = searchResults.matches.map(match => match.id);
+
+        let contextText = "No relevant products found in the store for the latest user query.";
+        if (productIds.length > 0) {
+            const relevantProducts = await prisma.product.findMany({
+                where: { id: { in: productIds } },
+            });
+            contextText = relevantProducts.map((p, i) =>
+                `Product ${i + 1}:\nID: ${p.id}\nName: ${p.name}\nDescription: ${p.description}\nPrice: ${p.price}\n`
+            ).join("\n---\n");
+        }
+        console.log(`[RAG] 1. Retrieval: Konteks ditemukan:\n${contextText}`);
+
+        // --- AUGMENTATION & GENERATION PHASE (Prompt Diperbarui dengan Riwayat) ---
+        console.log("[RAG] 2. & 3.: Membuat prompt dengan riwayat dan memanggil LLM...");
+
+        // Format riwayat chat untuk dimasukkan ke dalam prompt
+        const formattedHistory = history.map(msg => `${msg.sender === 'user' ? 'User' : 'Revo'}: ${msg.text}`).join('\n');
+
+        const prompt = `
+      You are 'Revo', a friendly and expert shopping assistant for REVOSTYLE.
+      Your goal is to have a continuous, helpful, and contextual conversation.
+      Use the following CHAT HISTORY to understand the context of the conversation.
+      Use the following PRODUCT CONTEXT to answer the user's latest question.
+
+      Base your answer ONLY on the provided context. Do not make up products.
+      If the user asks a follow-up question (e.g., "what about a cheaper one?"), use the CHAT HISTORY to understand what they are referring to.
+
+      CHAT HISTORY:
+      ---
+      ${formattedHistory}
+      ---
+
+      PRODUCT CONTEXT (based on the latest user message):
+      ---
+      ${contextText}
+      ---
+
+      Respond to the latest user message as 'Revo'. Your response must be a valid JSON object with two keys:
+      1. "responseText": A conversational, helpful reply in Markdown format.
+      2. "recommendedProductIds": An array of product IDs from the context that you mentioned.
+
+      YOUR JSON RESPONSE:
+    `;
+
+        const completion = await openai.chat.completions.create({
+            model: "gpt-4o",
+            messages: [{ role: "user", content: prompt }],
+            response_format: { type: "json_object" },
+        });
+
+        const aiJsonResponse = JSON.parse(completion.choices[0].message.content);
+        console.log(`[RAG] 3. Generation: Jawaban JSON dari AI:`, aiJsonResponse);
+
+        res.json({
+            reply: aiJsonResponse.responseText,
+            productIds: aiJsonResponse.recommendedProductIds || []
+        });
+
+    } catch (error) {
+        console.error("Error in AI Chat Handler:", error);
+        res.status(500).json({ reply: "Sorry, I'm having trouble thinking right now.", productIds: [] });
+    }
+};
+
 
 module.exports = {
     getAllProducts,
     semanticSearch,
     aiStylist,
     visualSearch,
-    getProductById
+    getProductById,
+    aiChatHandler
 };

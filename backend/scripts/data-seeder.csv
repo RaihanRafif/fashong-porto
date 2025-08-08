@@ -1,101 +1,101 @@
 product_id,product_name,category,price,stock,description,shop_name,rating,reviews_count,image_url
-PROD001,Keripik Singkong Balado Pedas,Makanan,25000,150,"Keripik singkong renyah dengan bumbu balado pedas manis asli Padang.",Dapur Nenek,4.8,256,https://picsum.photos/seed/PROD001/400/400
-PROD002,Kemeja Batik Pria Lengan Panjang,Pakaian,250000,50,"Kemeja batik katun primisima, adem dan nyaman dipakai untuk acara formal.",Batik Jaya,4.9,512,https://picsum.photos/seed/PROD002/400/400
-PROD003,Kopi Robusta Gayo 250gr,Minuman,75000,80,"Biji kopi robusta asli Gayo, Aceh. Aroma kuat dan rasa yang mantap.",Kopi Nusantara,4.7,320,https://picsum.photos/seed/PROD003/400/400
-PROD004,Gamis Wanita Modern Syari,Pakaian,350000,45,"Gamis bahan wolfis premium dengan desain modern dan elegan.",Hijab Style,4.8,450,https://picsum.photos/seed/PROD004/400/400
-PROD005,Rendang Daging Sapi Instan,Makanan,85000,90,"Rendang daging sapi siap saji, praktis dan lezat tanpa bahan pengawet.",Rasa Minang,4.9,680,https://picsum.photos/seed/PROD005/400/400
-PROD006,Kaos Polos Katun Combed 30s,Pakaian,65000,200,"Kaos polos unisex bahan katun combed 30s, lembut dan tidak panas.",Basic Wear,4.6,1124,https://picsum.photos/seed/PROD006/400/400
-PROD007,Teh Hijau Melati Celup,Minuman,30000,120,"Teh hijau pilihan dengan aroma bunga melati yang menenangkan. Isi 25 kantong.",Sari Wangi Teh,4.7,188,https://picsum.photos/seed/PROD007/400/400
-PROD008,Sambal Bawang Botol,Makanan,35000,110,"Sambal bawang pedas, dibuat dari bahan-bahan segar pilihan.",Sambal Juara,4.8,310,https://picsum.photos/seed/PROD008/400/400
-PROD009,Celana Chino Pria Slim Fit,Pakaian,180000,75,"Celana chino bahan katun stretch, model slim fit yang modern.",Urban Male,4.5,215,https://picsum.photos/seed/PROD009/400/400
-PROD010,Susu Kurma Organik 1L,Minuman,55000,60,"Susu segar dipadukan dengan sari kurma organik, menyehatkan dan enak.",Sehat Selalu,4.9,410,https://picsum.photos/seed/PROD010/400/400
-PROD011,Kue Lapis Legit Premium,Makanan,150000,40,"Kue lapis legit dengan resep kuno, menggunakan mentega Wijsman.",Toko Kue Ibu,4.9,150,https://picsum.photos/seed/PROD011/400/400
-PROD012,Jaket Hoodie Jumper,Pakaian,155000,100,"Jaket hoodie bahan fleece tebal, cocok untuk pria dan wanita.",Fashionista,4.6,350,https://picsum.photos/seed/PROD012/400/400
-PROD013,Jus Jambu Biji Merah Asli,Minuman,22000,95,"Jus jambu biji merah tanpa tambahan gula dan pengawet. Kemasan 1 liter.",Fruitastic,4.7,98,https://picsum.photos/seed/PROD013/400/400
-PROD014,Abon Sapi Original,Makanan,45000,130,"Abon sapi manis gurih, cocok sebagai lauk atau taburan roti.",Dapur Nenek,4.8,205,https://picsum.photos/seed/PROD014/400/400
-PROD015,Daster Batik Rumahan,Pakaian,50000,180,"Daster bahan katun rayon, adem dan nyaman untuk dipakai sehari-hari.",Batik Jaya,4.7,430,https://picsum.photos/seed/PROD015/400/400
-PROD016,Madu Hutan Murni 500ml,Minuman,120000,70,"Madu hutan asli dari pedalaman Sumatera, khasiat terjamin.",Herbal Sehat,4.9,300,https://picsum.photos/seed/PROD016/400/400
-PROD017,Mie Lidi Pedas Bumbu Basah,Makanan,15000,250,"Cemilan mie lidi dengan bumbu basah pedas yang bikin nagih.",Cemilan Asik,4.5,550,https://picsum.photos/seed/PROD017/400/400
-PROD018,Kopi Arabika Toraja 250gr,Minuman,95000,65,"Biji kopi arabika specialty dari Toraja. Cocok untuk manual brew.",Kopi Nusantara,4.8,280,https://picsum.photos/seed/PROD018/400/400
-PROD019,Tunik Wanita Lengan Panjang,Pakaian,140000,80,"Tunik muslimah bahan katun toyobo, simpel dan elegan.",Hijab Style,4.7,290,https://picsum.photos/seed/PROD019/400/400
-PROD020,Bakso Aci Instan Komplit,Makanan,28000,140,"Paket bakso aci instan komplit dengan cuanki, pilus, dan bumbu pedas.",Cemilan Asik,4.6,780,https://picsum.photos/seed/PROD020/400/400
-PROD021,Celana Kulot Wanita,Pakaian,110000,110,"Celana kulot bahan scuba, nyaman dan flowy untuk gaya kasual.",Fashionista,4.5,310,https://picsum.photos/seed/PROD021/400/400
-PROD022,Sirup Markisa Asli,Minuman,60000,55,"Sirup kental dari buah markisa asli Medan, segar untuk dibuat minuman.",Rasa Minang,4.8,120,https://picsum.photos/seed/PROD022/400/400
-PROD023,Cokelat Batang Dark 70%,Makanan,40000,90,"Cokelat hitam 70% kakao, baik untuk kesehatan jantung.",Sehat Selalu,4.7,180,https://picsum.photos/seed/PROD023/400/400
-PROD024,Koko Pria Dewasa Modern,Pakaian,175000,60,"Baju koko pria desain modern dengan bahan katun bordir.",Batik Jaya,4.8,240,https://picsum.photos/seed/PROD024/400/400
-PROD025,Wedang Uwuh Rempah Komplit,Minuman,32000,150,"Paket seduh wedang uwuh, menghangatkan badan dan menjaga stamina.",Herbal Sehat,4.9,400,https://picsum.photos/seed/PROD025/400/400
-PROD026,Tempe Keripik Sagu,Makanan,22000,160,"Keripik tempe renyah dibalut tepung sagu, gurih dan unik.",Dapur Nenek,4.6,195,https://picsum.photos/seed/PROD026/400/400
-PROD027,Rok Plisket Premium,Pakaian,95000,130,"Rok plisket bahan hyget super, tidak menerawang dan jatuh.",Fashionista,4.7,650,https://picsum.photos/seed/PROD027/400/400
-PROD028,Sari Lemon Murni 500ml,Minuman,45000,85,"100% perasan lemon murni, cocok untuk diet dan menjaga imunitas.",Fruitastic,4.8,330,https://picsum.photos/seed/PROD028/400/400
-PROD029,Dendeng Balado Kering,Makanan,75000,70,"Dendeng sapi kering renyah dengan bumbu balado pedas.",Rasa Minang,4.7,210,https://picsum.photos/seed/PROD029/400/400
-PROD030,Kemeja Flanel Pria,Pakaian,160000,90,"Kemeja flanel lengan panjang bahan katun tebal dan lembut.",Urban Male,4.6,380,https://picsum.photos/seed/PROD030/400/400
-PROD031,Susu Kedelai Bubuk Instan,Minuman,38000,115,"Susu kedelai bubuk tanpa pemanis buatan, kaya protein nabati.",Sehat Selalu,4.5,140,https://picsum.photos/seed/PROD031/400/400
-PROD032,Dodol Garut Asli,Makanan,30000,100,"Dodol Garut dengan aneka rasa, dibuat dari resep turun temurun.",Cemilan Asik,4.7,250,https://picsum.photos/seed/PROD032/400/400
-PROD033,Legging Wanita Wudhu,Pakaian,55000,150,"Legging panjang sekaligus kaos kaki, praktis untuk berwudhu.",Hijab Style,4.8,500,https://picsum.photos/seed/PROD033/400/400
-PROD034,Cokelat Panas Bubuk,Minuman,48000,80,"Minuman cokelat bubuk premium, kental dan nikmat disajikan panas.",Kopi Nusantara,4.7,190,https://picsum.photos/seed/PROD034/400/400
-PROD035,Bawang Goreng Renyah,Makanan,20000,200,"Bawang goreng sumenep super renyah dan wangi. Kemasan 100gr.",Dapur Nenek,4.9,800,https://picsum.photos/seed/PROD035/400/400
-PROD036,Blouse Wanita Korea Style,Pakaian,125000,95,"Blouse wanita model korea bahan sifon ceruti.",Fashionista,4.6,410,https://picsum.photos/seed/PROD036/400/400
-PROD037,Teh Bunga Telang Kering,Minuman,25000,130,"Bunga telang kering organik, bisa berubah warna saat diberi lemon.",Herbal Sehat,4.8,280,https://picsum.photos/seed/PROD037/400/400
-PROD038,Makaroni Bantet Pedas Daun Jeruk,Makanan,18000,300,"Makaroni goreng bantet dengan bumbu pedas dan aroma daun jeruk.",Cemilan Asik,4.5,950,https://picsum.photos/seed/PROD038/400/400
-PROD039,Celana Jeans Pria Regular Fit,Pakaian,220000,70,"Celana jeans bahan denim 14oz, model regular fit klasik.",Urban Male,4.7,320,https://picsum.photos/seed/PROD039/400/400
-PROD040,Jahe Merah Instan,Minuman,35000,140,"Minuman jahe merah instan, menghangatkan tubuh dan meredakan masuk angin.",Herbal Sehat,4.8,450,https://picsum.photos/seed/PROD040/400/400
-PROD041,Emping Melinjo Pedas Manis,Makanan,42000,90,"Emping melinjo kualitas super dengan bumbu pedas manis.",Dapur Nenek,4.7,180,https://picsum.photos/seed/PROD041/400/400
-PROD042,Kaftan Wanita Lebaran,Pakaian,280000,50,"Kaftan mewah dengan hiasan payet, cocok untuk hari raya.",Hijab Style,4.9,200,https://picsum.photos/seed/PROD042/400/400
-PROD043,Kunyit Asam Bubuk Gula Aren,Minuman,33000,120,"Minuman tradisional kunyit asam dengan pemanis gula aren asli.",Herbal Sehat,4.7,210,https://picsum.photos/seed/PROD043/400/400
-PROD044,Ikan Teri Medan Crispy,Makanan,55000,85,"Ikan teri medan digoreng crispy, gurih dan kaya kalsium.",Rasa Minang,4.8,260,https://picsum.photos/seed/PROD044/400/400
-PROD045,Cardigan Rajut Wanita,Pakaian,115000,110,"Cardigan bahan rajut halus, model oversize ala Korea.",Fashionista,4.6,480,https://picsum.photos/seed/PROD045/400/400
-PROD046,Kopi Luwak Liar Asli 100gr,Minuman,250000,30,"Kopi luwak liar dari Gayo, salah satu kopi termahal di dunia.",Kopi Nusantara,4.9,95,https://picsum.photos/seed/PROD046/400/400
-PROD047,Bumbu Pecel Siap Seduh,Makanan,27000,150,"Bumbu pecel khas Madiun, tinggal seduh dengan air panas.",Dapur Nenek,4.8,350,https://picsum.photos/seed/PROD047/400/400
-PROD048,Piyama Set Katun Rayon,Pakaian,130000,100,"Set piyama atasan dan bawahan bahan katun rayon motif lucu.",Basic Wear,4.7,520,https://picsum.photos/seed/PROD048/400/400
-PROD049,Teh Rosella Merah Kering,Minuman,28000,125,"Bunga rosella merah kering, kaya vitamin C dan antioksidan.",Herbal Sehat,4.7,230,https://picsum.photos/seed/PROD049/400/400
-PROD050,Pia Basah Coklat Keju,Makanan,45000,90,"Pia basah isi coklat dan keju, lumer di mulut. Isi 10 pcs.",Toko Kue Ibu,4.8,190,https://picsum.photos/seed/PROD050/400/400
-PROD051,Singlet Pria Katun,Pakaian,35000,250,"Kaos dalam pria bahan katun, menyerap keringat.",Basic Wear,4.6,700,https://picsum.photos/seed/PROD051/400/400
-PROD052,Cuka Apel Organik,Minuman,70000,75,"Cuka apel organik with the mother, baik untuk pencernaan.",Sehat Selalu,4.9,480,https://picsum.photos/seed/PROD052/400/400
-PROD053,Kerupuk Kulit Sapi Asli,Makanan,38000,110,"Kerupuk kulit (rambak) sapi asli, gurih dan renyah.",Rasa Minang,4.7,240,https://picsum.photos/seed/PROD053/400/400
-PROD054,Pashmina Ceruti Babydoll,Pakaian,45000,300,"Pashmina bahan ceruti babydoll premium, mudah dibentuk.",Hijab Style,4.8,1500,https://picsum.photos/seed/PROD054/400/400
-PROD055,Susu Kambing Etawa Bubuk,Minuman,55000,80,"Susu kambing etawa bubuk, alternatif bagi yang alergi susu sapi.",Herbal Sehat,4.7,310,https://picsum.photos/seed/PROD055/400/400
-PROD056,Sale Pisang Manis Crispy,Makanan,24000,140,"Sale pisang ambon digoreng crispy dengan rasa manis alami.",Dapur Nenek,4.6,220,https://picsum.photos/seed/PROD056/400/400
-PROD057,Sweater Crewneck Polos,Pakaian,120000,120,"Sweater crewneck unisex bahan fleece katun, simpel dan hangat.",Basic Wear,4.7,400,https://picsum.photos/seed/PROD057/400/400
-PROD058,Kopi Hijau Bubuk (Green Coffee),Minuman,65000,60,"Kopi hijau bubuk murni untuk membantu program diet.",Sehat Selalu,4.5,150,https://picsum.photos/seed/PROD058/400/400
-PROD059,Tahu Bulat Crispy Frozen,Makanan,30000,100,"Tahu bulat frozen siap goreng, crispy di luar lembut di dalam.",Cemilan Asik,4.6,300,https://picsum.photos/seed/PROD059/400/400
-PROD060,Boxer Pria Katun Motif,Pakaian,40000,180,"Celana boxer pria bahan katun dengan aneka motif keren.",Urban Male,4.7,600,https://picsum.photos/seed/PROD060/400/400
-PROD061,Cokelat Kerikil Arab,Makanan,35000,130,"Cokelat unik berbentuk seperti batu kerikil, oleh-oleh haji.",Cemilan Asik,4.8,450,https://picsum.photos/seed/PROD061/400/400
-PROD062,Bandrek Instan Khas Bandung,Minuman,28000,110,"Minuman bandrek instan dengan rempah-rempah pilihan khas Sunda.",Herbal Sehat,4.7,190,https://picsum.photos/seed/PROD062/400/400
-PROD063,Blazer Wanita Kerja,Pakaian,210000,70,"Blazer kerja wanita model formal dengan bahan gabardin.",Fashionista,4.7,280,https://picsum.photos/seed/PROD063/400/400
-PROD064,Kacang Bawang Goreng,Makanan,26000,160,"Kacang tanah goreng dengan bawang putih, renyah dan gurih.",Dapur Nenek,4.8,400,https://picsum.photos/seed/PROD064/400/400
-PROD065,Sirup Jahe Gula Aren,Minuman,50000,80,"Sirup jahe kental dengan pemanis gula aren, praktis dan menyehatkan.",Herbal Sehat,4.8,170,https://picsum.photos/seed/PROD065/400/400
-PROD066,Jilbab Bergo Maryam,Pakaian,40000,220,"Jilbab instan bergo maryam bahan diamond, non-pad dan praktis.",Hijab Style,4.7,980,https://picsum.photos/seed/PROD066/400/400
-PROD067,Gula Aren Semut Organik,Makanan,32000,150,"Gula aren bubuk (semut) organik, lebih sehat dari gula pasir.",Sehat Selalu,4.9,550,https://picsum.photos/seed/PROD067/400/400
-PROD068,Kemeja Pantai Pria Motif,Pakaian,135000,85,"Kemeja pria lengan pendek bahan rayon, adem untuk ke pantai.",Urban Male,4.6,250,https://picsum.photos/seed/PROD068/400/400
-PROD069,Teh Hitam Celup Premium,Minuman,25000,140,"Teh hitam berkualitas ekspor, aroma dan rasa yang kuat. Isi 25 kantong.",Sari Wangi Teh,4.6,160,https://picsum.photos/seed/PROD069/400/400
-PROD070,Basreng Pedas Daun Jeruk,Makanan,19000,280,"Bakso goreng kering renyah dengan bumbu pedas dan wangi daun jeruk.",Cemilan Asik,4.5,1200,https://picsum.photos/seed/PROD070/400/400
-PROD071,Celana Training Pria,Pakaian,90000,130,"Celana training bahan baby terry, cocok untuk olahraga atau santai.",Basic Wear,4.5,350,https://picsum.photos/seed/PROD071/400/400
-PROD072,Madu Propolis Trigona,Minuman,150000,50,"Madu langka dari lebah trigona, kaya akan propolis dan bee pollen.",Herbal Sehat,4.9,220,https://picsum.photos/seed/PROD072/400/400
-PROD073,Brownies Panggang Coklat,Makanan,60000,60,"Brownies panggang fudgy dengan topping choco chips, ukuran 20x10 cm.",Toko Kue Ibu,4.8,210,https://picsum.photos/seed/PROD073/400/400
-PROD074,Manset Tangan Jempol,Pakaian,15000,400,"Manset tangan bahan spandek rayon, ada lubang untuk jempol.",Hijab Style,4.7,850,https://picsum.photos/seed/PROD074/400/400
-PROD075,Kopi Susu Gula Aren 1L,Minuman,80000,70,"Es kopi susu kekinian dengan gula aren asli dalam kemasan botol 1 liter.",Kopi Nusantara,4.8,600,https://picsum.photos/seed/PROD075/400/400
-PROD076,Keripik Buah Apel Malang,Makanan,33000,95,"Keripik renyah yang dibuat dari buah apel asli Malang tanpa pemanis.",Cemilan Asik,4.6,180,https://picsum.photos/seed/PROD076/400/400
-PROD077,Kaos Kaki Sport,Pakaian,20000,250,"Kaos kaki tebal di atas mata kaki, cocok untuk olahraga.",Basic Wear,4.6,550,https://picsum.photos/seed/PROD077/400/400
-PROD078,Serbuk Cincau Hitam Instan,Minuman,18000,160,"Bubuk cincau hitam (janggelan) instan, mudah dibuat.",Sehat Selalu,4.5,130,https://picsum.photos/seed/PROD078/400/400
-PROD079,Bumbu Rawon Instan,Makanan,22000,140,"Bumbu jadi untuk memasak rawon khas Jawa Timur, praktis dan otentik.",Dapur Nenek,4.7,280,https://picsum.photos/seed/PROD079/400/400
-PROD080,Sarung Tenun Dewasa,Pakaian,85000,110,"Sarung tenun gajah duduk, motif klasik dan bahan adem.",Batik Jaya,4.8,420,https://picsum.photos/seed/PROD080/400/400
-PROD081,Sari Jahe Merah Gula Batu,Minuman,40000,90,"Minuman sari jahe merah dengan pemanis gula batu asli, tanpa ampas.",Herbal Sehat,4.8,250,https://picsum.photos/seed/PROD081/400/400
-PROD082,Pisang Coklat Lumer Frozen,Makanan,35000,120,"Piscok lumer frozen, tinggal goreng, coklatnya meleleh di mulut.",Cemilan Asik,4.7,480,https://picsum.photos/seed/PROD082/400/400
-PROD083,Inner Ciput Rajut,Pakaian,10000,500,"Ciput (dalaman jilbab) bahan rajut, anti pusing dan nyaman.",Hijab Style,4.8,2100,https://picsum.photos/seed/PROD083/400/400
-PROD084,Matcha Latte Powder,Minuman,75000,75,"Bubuk matcha latte premium impor dari Jepang, rasa otentik.",Kopi Nusantara,4.7,200,https://picsum.photos/seed/PROD084/400/400
-PROD085,Bihun Jagung Instan,Makanan,15000,180,"Bihun yang terbuat dari pati jagung, lebih sehat dan kenyal.",Sehat Selalu,4.5,160,https://picsum.photos/seed/PROD085/400/400
-PROD086,Kemeja Putih Polos Pria,Pakaian,145000,90,"Kemeja putih polos lengan panjang bahan katun oxford, untuk kerja/formal.",Urban Male,4.6,310,https://picsum.photos/seed/PROD086/400/400
-PROD087,Minyak Kelapa VCO 250ml,Minuman,55000,80,"Virgin Coconut Oil (VCO) murni, bisa diminum atau untuk perawatan kulit.",Sehat Selalu,4.9,350,https://picsum.photos/seed/PROD087/400/400
-PROD088,Usus Ayam Crispy Original,Makanan,21000,200,"Cemilan usus ayam digoreng crispy dengan rasa original gurih.",Dapur Nenek,4.6,450,https://picsum.photos/seed/PROD088/400/400
-PROD089,Topi Baseball Polos,Pakaian,45000,210,"Topi baseball unisex bahan katun twill, pengait belakang dari besi.",Basic Wear,4.7,750,https://picsum.photos/seed/PROD089/400/400
-PROD090,Bir Pletok Bubuk Instan,Minuman,30000,100,"Minuman tradisional Betawi penghangat badan, halal tanpa alkohol.",Herbal Sehat,4.7,150,https://picsum.photos/seed/PROD090/400/400
-PROD091,Sumpia Udang Kering,Makanan,25000,150,"Cemilan lumpia kering mini dengan isian ebi (udang kering).",Cemilan Asik,4.7,380,https://picsum.photos/seed/PROD091/400/400
-PROD092,Celana Kargo Pria Panjang,Pakaian,195000,80,"Celana kargo banyak saku bahan ripstop, kuat untuk kegiatan outdoor.",Urban Male,4.6,280,https://picsum.photos/seed/PROD092/400/400
-PROD093,Cokelat Bubuk Murni,Minuman,45000,95,"Bubuk kakao murni tanpa campuran gula, cocok untuk membuat kue.",Toko Kue Ibu,4.8,240,https://picsum.photos/seed/PROD093/400/400
-PROD094,Selai Coklat Hazelnut,Makanan,65000,70,"Selai roti rasa coklat dan kacang hazelnut, impor.",Fruitastic,4.8,320,https://picsum.photos/seed/PROD094/400/400
-PROD095,Jumpsuit Wanita Kasual,Pakaian,165000,75,"Jumpsuit bahan katun rayon, adem dan nyaman untuk hangout.",Fashionista,4.5,210,https://picsum.photos/seed/PROD095/400/400
-PROD096,Kopi Jahe (Kojima),Minuman,38000,110,"Perpaduan kopi, jahe, dan madu dalam satu minuman instan.",Herbal Sehat,4.6,180,https://picsum.photos/seed/PROD096/400/400
-PROD097,Nastar Keju Premium,Makanan,95000,50,"Kue kering nastar dengan isian nanas asli dan topping keju edam.",Toko Kue Ibu,4.9,160,https://picsum.photos/seed/PROD097/400/400
-PROD098,Rompi Rajut Wanita (Vest),Pakaian,85000,130,"Rompi rajut V-neck model crop, cocok untuk dipadukan dengan kemeja.",Fashionista,4.7,410,https://picsum.photos/seed/PROD098/400/400
-PROD099,Granola Coklat Kacang,Makanan,70000,85,"Sereal granola dengan campuran oat, kacang-kacangan, dan coklat.",Sehat Selalu,4.8,290,https://picsum.photos/seed/PROD099/400/400
-PROD100,Air Mineral Alkali pH 8+,Minuman,12000,150,"Air mineral dengan pH basa (alkali), baik untuk menetralkan asam tubuh.",Sehat Selalu,4.7,110,https://picsum.photos/seed/PROD100/400/400
+PROD001,Spicy Balado Cassava Chips,Food,25000,150,"Crispy cassava chips with authentic Padang sweet and spicy balado seasoning.",Grandma's Kitchen,4.8,256,https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=400&h=400&fit=crop
+PROD002,Men's Long Sleeve Batik Shirt,Clothing,250000,50,"Premium cotton batik shirt, cool and comfortable for formal events.",Batik Jaya,4.9,512,https://images.unsplash.com/photo-1622519407650-3df9883f76a2?w=400&h=400&fit=crop
+PROD003,Gayo Robusta Coffee 250gr,Beverage,75000,80,"Original Gayo robusta coffee beans from Aceh. Strong aroma and great taste.",Nusantara Coffee,4.7,320,https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=400&fit=crop
+PROD004,Modern Syari Women's Gamis,Clothing,350000,45,"Premium wolfis fabric gamis with modern and elegant design.",Hijab Style,4.8,450,https://images.unsplash.com/photo-1583391733956-6c78276477e1?w=400&h=400&fit=crop
+PROD005,Instant Beef Rendang,Food,85000,90,"Ready-to-eat beef rendang, practical and delicious without preservatives.",Minang Taste,4.9,680,https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=400&fit=crop
+PROD006,Combed Cotton 30s Plain T-Shirt,Clothing,65000,200,"Unisex plain t-shirt made from combed cotton 30s, soft and not hot.",Basic Wear,4.6,1124,https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop
+PROD007,Jasmine Green Tea Bags,Beverage,30000,120,"Premium green tea with soothing jasmine flower aroma. Contains 25 tea bags.",Sari Wangi Tea,4.7,188,https://images.unsplash.com/photo-1594631661960-0ad05ba629f7?w=400&h=400&fit=crop
+PROD008,Bottled Garlic Chili Sauce,Food,35000,110,"Spicy garlic chili sauce made from fresh premium ingredients.",Champion Chili,4.8,310,https://images.unsplash.com/photo-1607532941433-304659e8198a?w=400&h=400&fit=crop
+PROD009,Men's Slim Fit Chino Pants,Clothing,180000,75,"Chino pants made from stretch cotton, modern slim fit style.",Urban Male,4.5,215,https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=400&h=400&fit=crop
+PROD010,Organic Date Milk 1L,Beverage,55000,60,"Fresh milk combined with organic date extract, healthy and delicious.",Always Healthy,4.9,410,https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400&h=400&fit=crop
+PROD011,Premium Lapis Legit Cake,Food,150000,40,"Traditional lapis legit cake made with Wijsman butter from an old recipe.",Mom's Cake Shop,4.9,150,https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=400&fit=crop
+PROD012,Hoodie Jumper Jacket,Clothing,155000,100,"Hoodie jacket made from thick fleece, suitable for men and women.",Fashionista,4.6,350,https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop
+PROD013,Pure Red Guava Juice,Beverage,22000,95,"Red guava juice without added sugar and preservatives. 1-liter packaging.",Fruitastic,4.7,98,https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=400&h=400&fit=crop
+PROD014,Original Beef Floss,Food,45000,130,"Sweet and savory beef floss, perfect as a side dish or bread topping.",Grandma's Kitchen,4.8,205,https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?w=400&h=400&fit=crop
+PROD015,Batik House Dress,Clothing,50000,180,"Cotton rayon house dress, cool and comfortable for daily wear.",Batik Jaya,4.7,430,https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=400&fit=crop
+PROD016,Pure Forest Honey 500ml,Beverage,120000,70,"Pure forest honey from the interior of Sumatra, guaranteed benefits.",Herbal Health,4.9,300,https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&h=400&fit=crop
+PROD017,Spicy Wet Seasoning Stick Noodles,Food,15000,250,"Stick noodle snacks with wet spicy seasoning that's addictive.",Fun Snacks,4.5,550,https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=400&fit=crop
+PROD018,Toraja Arabica Coffee 250gr,Beverage,95000,65,"Specialty arabica coffee beans from Toraja. Perfect for manual brewing.",Nusantara Coffee,4.8,280,https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=400&fit=crop
+PROD019,Women's Long Sleeve Tunic,Clothing,140000,80,"Muslim tunic made from toyobo cotton, simple and elegant.",Hijab Style,4.7,290,https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=400&fit=crop
+PROD020,Complete Instant Aci Meatballs,Food,28000,140,"Complete instant aci meatball package with cuanki, pilus, and spicy seasoning.",Fun Snacks,4.6,780,https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=400&fit=crop
+PROD021,Women's Culotte Pants,Clothing,110000,110,"Culotte pants made from scuba fabric, comfortable and flowy for casual style.",Fashionista,4.5,310,https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=400&fit=crop
+PROD022,Pure Passion Fruit Syrup,Beverage,60000,55,"Concentrated syrup from pure Medan passion fruit, fresh for making drinks.",Minang Taste,4.8,120,https://images.unsplash.com/photo-1571197776993-b9eeb81df333?w=400&h=400&fit=crop
+PROD023,70% Dark Chocolate Bar,Food,40000,90,"70% cocoa dark chocolate, good for heart health.",Always Healthy,4.7,180,https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&h=400&fit=crop
+PROD024,Modern Adult Men's Koko,Clothing,175000,60,"Modern design men's koko shirt with embroidered cotton fabric.",Batik Jaya,4.8,240,https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop
+PROD025,Complete Spice Wedang Uwuh,Beverage,32000,150,"Wedang uwuh brew package, warms the body and maintains stamina.",Herbal Health,4.9,400,https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=400&fit=crop
+PROD026,Sago Tempeh Chips,Food,22000,160,"Crispy tempeh chips coated with sago flour, savory and unique.",Grandma's Kitchen,4.6,195,https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=400&h=400&fit=crop
+PROD027,Premium Pleated Skirt,Clothing,95000,130,"Pleated skirt made from super hyget fabric, not see-through and falls well.",Fashionista,4.7,650,https://images.unsplash.com/photo-1583496661160-fb5886a13d57?w=400&h=400&fit=crop
+PROD028,Pure Lemon Extract 500ml,Beverage,45000,85,"100% pure lemon juice, perfect for diet and maintaining immunity.",Fruitastic,4.8,330,https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=400&h=400&fit=crop
+PROD029,Dried Balado Jerky,Food,75000,70,"Crispy dried beef jerky with spicy balado seasoning.",Minang Taste,4.7,210,https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=400&fit=crop
+PROD030,Men's Flannel Shirt,Clothing,160000,90,"Long-sleeve flannel shirt made from thick and soft cotton.",Urban Male,4.6,380,https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=400&fit=crop
+PROD031,Instant Soy Milk Powder,Beverage,38000,115,"Soy milk powder without artificial sweeteners, rich in plant protein.",Always Healthy,4.5,140,https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400&h=400&fit=crop
+PROD032,Original Garut Dodol,Food,30000,100,"Garut dodol with various flavors, made from traditional recipes.",Fun Snacks,4.7,250,https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?w=400&h=400&fit=crop
+PROD033,Women's Wudu Leggings,Clothing,55000,150,"Long leggings with built-in socks, practical for ablution.",Hijab Style,4.8,500,https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=400&fit=crop
+PROD034,Hot Chocolate Powder,Beverage,48000,80,"Premium chocolate powder drink, thick and delicious served hot.",Nusantara Coffee,4.7,190,https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=400&fit=crop
+PROD035,Crispy Fried Onions,Food,20000,200,"Super crispy and fragrant Sumenep fried onions. 100gr packaging.",Grandma's Kitchen,4.9,800,https://images.unsplash.com/photo-1607532941433-304659e8198a?w=400&h=400&fit=crop
+PROD036,Korean Style Women's Blouse,Clothing,125000,95,"Korean style women's blouse made from ceruti chiffon.",Fashionista,4.6,410,https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=400&fit=crop
+PROD037,Dried Blue Pea Flower Tea,Beverage,25000,130,"Organic dried blue pea flowers, can change color when lemon is added.",Herbal Health,4.8,280,https://images.unsplash.com/photo-1594631661960-0ad05ba629f7?w=400&h=400&fit=crop
+PROD038,Spicy Kaffir Lime Leaf Bantet Macaroni,Food,18000,300,"Fried bantet macaroni with spicy seasoning and kaffir lime leaf aroma.",Fun Snacks,4.5,950,https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=400&fit=crop
+PROD039,Men's Regular Fit Jeans,Clothing,220000,70,"Jeans made from 14oz denim fabric, classic regular fit style.",Urban Male,4.7,320,https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=400&fit=crop
+PROD040,Instant Red Ginger,Beverage,35000,140,"Instant red ginger drink, warms the body and relieves cold symptoms.",Herbal Health,4.8,450,https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=400&fit=crop
+PROD041,Sweet Spicy Melinjo Chips,Food,42000,90,"Super quality melinjo chips with sweet and spicy seasoning.",Grandma's Kitchen,4.7,180,https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=400&h=400&fit=crop
+PROD042,Women's Eid Kaftan,Clothing,280000,50,"Luxurious kaftan with sequin decorations, perfect for holidays.",Hijab Style,4.9,200,https://images.unsplash.com/photo-1583391733956-6c78276477e1?w=400&h=400&fit=crop
+PROD043,Turmeric Tamarind Palm Sugar Powder,Beverage,33000,120,"Traditional turmeric tamarind drink with pure palm sugar sweetener.",Herbal Health,4.7,210,https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=400&fit=crop
+PROD044,Crispy Medan Anchovies,Food,55000,85,"Crispy fried Medan anchovies, savory and rich in calcium.",Minang Taste,4.8,260,https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?w=400&h=400&fit=crop
+PROD045,Women's Knit Cardigan,Clothing,115000,110,"Fine knit cardigan, Korean-style oversize model.",Fashionista,4.6,480,https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop
+PROD046,Pure Wild Kopi Luwak 100gr,Beverage,250000,30,"Wild kopi luwak from Gayo, one of the most expensive coffees in the world.",Nusantara Coffee,4.9,95,https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=400&fit=crop
+PROD047,Ready-to-Brew Pecel Seasoning,Food,27000,150,"Authentic Madiun pecel seasoning, just brew with hot water.",Grandma's Kitchen,4.8,350,https://images.unsplash.com/photo-1607532941433-304659e8198a?w=400&h=400&fit=crop
+PROD048,Cotton Rayon Pajama Set,Clothing,130000,100,"Top and bottom pajama set made from cotton rayon with cute patterns.",Basic Wear,4.7,520,https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop
+PROD049,Dried Red Roselle Tea,Beverage,28000,125,"Dried red roselle flowers, rich in vitamin C and antioxidants.",Herbal Health,4.7,230,https://images.unsplash.com/photo-1594631661960-0ad05ba629f7?w=400&h=400&fit=crop
+PROD050,Wet Chocolate Cheese Pia,Food,45000,90,"Wet pia filled with chocolate and cheese, melts in your mouth. Contains 10 pieces.",Mom's Cake Shop,4.8,190,https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=400&fit=crop
+PROD051,Men's Cotton Singlet,Clothing,35000,250,"Men's undershirt made from cotton, absorbs sweat.",Basic Wear,4.6,700,https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop
+PROD052,Organic Apple Cider Vinegar,Beverage,70000,75,"Organic apple cider vinegar with the mother, good for digestion.",Always Healthy,4.9,480,https://images.unsplash.com/photo-1571197776993-b9eeb81df333?w=400&h=400&fit=crop
+PROD053,Original Beef Skin Crackers,Food,38000,110,"Original beef skin (rambak) crackers, savory and crispy.",Minang Taste,4.7,240,https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=400&h=400&fit=crop
+PROD054,Ceruti Babydoll Pashmina,Clothing,45000,300,"Premium ceruti babydoll pashmina, easy to style.",Hijab Style,4.8,1500,https://images.unsplash.com/photo-1583391733956-6c78276477e1?w=400&h=400&fit=crop
+PROD055,Etawa Goat Milk Powder,Beverage,55000,80,"Etawa goat milk powder, alternative for those allergic to cow's milk.",Herbal Health,4.7,310,https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400&h=400&fit=crop
+PROD056,Sweet Crispy Banana Chips,Food,24000,140,"Crispy fried banana chips with natural sweet taste.",Grandma's Kitchen,4.6,220,https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=400&h=400&fit=crop
+PROD057,Plain Crewneck Sweater,Clothing,120000,120,"Unisex crewneck sweater made from cotton fleece, simple and warm.",Basic Wear,4.7,400,https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop
+PROD058,Green Coffee Powder,Beverage,65000,60,"Pure green coffee powder to help with diet programs.",Always Healthy,4.5,150,https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=400&fit=crop
+PROD059,Frozen Crispy Round Tofu,Food,30000,100,"Frozen round tofu ready to fry, crispy outside and soft inside.",Fun Snacks,4.6,300,https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?w=400&h=400&fit=crop
+PROD060,Men's Patterned Cotton Boxers,Clothing,40000,180,"Men's boxer shorts made from cotton with various cool patterns.",Urban Male,4.7,600,https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop
+PROD061,Arabic Pebble Chocolate,Food,35000,130,"Unique chocolate shaped like pebbles, hajj souvenir.",Fun Snacks,4.8,450,https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&h=400&fit=crop
+PROD062,Instant Bandung Bandrek,Beverage,28000,110,"Instant bandrek drink with selected Sundanese spices.",Herbal Health,4.7,190,https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=400&fit=crop
+PROD063,Women's Work Blazer,Clothing,210000,70,"Women's formal work blazer made from gabardine fabric.",Fashionista,4.7,280,https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=400&fit=crop
+PROD064,Fried Garlic Peanuts,Food,26000,160,"Fried peanuts with garlic, crispy and savory.",Grandma's Kitchen,4.8,400,https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=400&h=400&fit=crop
+PROD065,Palm Sugar Ginger Syrup,Beverage,50000,80,"Concentrated ginger syrup with palm sugar sweetener, practical and healthy.",Herbal Health,4.8,170,https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=400&fit=crop
+PROD066,Bergo Maryam Hijab,Clothing,40000,220,"Instant bergo maryam hijab made from diamond fabric, non-padded and practical.",Hijab Style,4.7,980,https://images.unsplash.com/photo-1583391733956-6c78276477e1?w=400&h=400&fit=crop
+PROD067,Organic Palm Sugar (Ant Sugar),Food,32000,150,"Organic palm sugar powder (ant sugar), healthier than regular sugar.",Always Healthy,4.9,550,https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?w=400&h=400&fit=crop
+PROD068,Men's Patterned Beach Shirt,Clothing,135000,85,"Men's short-sleeve shirt made from rayon, cool for the beach.",Urban Male,4.6,250,https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=400&fit=crop
+PROD069,Premium Black Tea Bags,Beverage,25000,140,"Export quality black tea with strong aroma and taste. Contains 25 bags.",Sari Wangi Tea,4.6,160,https://images.unsplash.com/photo-1594631661960-0ad05ba629f7?w=400&h=400&fit=crop
+PROD070,Spicy Kaffir Lime Leaf Basreng,Food,19000,280,"Crispy dried fried meatballs with spicy seasoning and fragrant kaffir lime leaves.",Fun Snacks,4.5,1200,https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=400&fit=crop
+PROD071,Men's Training Pants,Clothing,90000,130,"Training pants made from baby terry, suitable for sports or casual wear.",Basic Wear,4.5,350,https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=400&h=400&fit=crop
+PROD072,Trigona Propolis Honey,Beverage,150000,50,"Rare honey from trigona bees, rich in propolis and bee pollen.",Herbal Health,4.9,220,https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&h=400&fit=crop
+PROD073,Baked Chocolate Brownies,Food,60000,60,"Fudgy baked brownies with choco chip topping, size 20x10 cm.",Mom's Cake Shop,4.8,210,https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=400&fit=crop
+PROD074,Thumb Hole Arm Sleeves,Clothing,15000,400,"Arm sleeves made from spandex rayon with thumb holes.",Hijab Style,4.7,850,https://images.unsplash.com/photo-1583391733956-6c78276477e1?w=400&h=400&fit=crop
+PROD075,Palm Sugar Coffee Milk 1L,Beverage,80000,70,"Trendy iced coffee milk with pure palm sugar in 1-liter bottle packaging.",Nusantara Coffee,4.8,600,https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=400&fit=crop
+PROD076,Malang Apple Fruit Chips,Food,33000,95,"Crispy chips made from pure Malang apples without sweeteners.",Fun Snacks,4.6,180,https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=400&h=400&fit=crop
+PROD077,Sport Socks,Clothing,20000,250,"Thick above-ankle socks, suitable for sports.",Basic Wear,4.6,550,https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop
+PROD078,Instant Black Grass Jelly Powder,Beverage,18000,160,"Instant black grass jelly (janggelan) powder, easy to make.",Always Healthy,4.5,130,https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=400&fit=crop
+PROD079,Instant Rawon Seasoning,Food,22000,140,"Ready-made seasoning for cooking authentic East Javanese rawon, practical and authentic.",Grandma's Kitchen,4.7,280,https://images.unsplash.com/photo-1607532941433-304659e8198a?w=400&h=400&fit=crop
+PROD080,Adult Woven Sarong,Clothing,85000,110,"Woven sarong with sitting elephant motif, classic pattern and cool fabric.",Batik Jaya,4.8,420,https://images.unsplash.com/photo-1622519407650-3df9883f76a2?w=400&h=400&fit=crop
+PROD081,Red Ginger Extract with Rock Sugar,Beverage,40000,90,"Red ginger extract drink with pure rock sugar sweetener, no pulp.",Herbal Health,4.8,250,https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=400&fit=crop
+PROD082,Frozen Melted Chocolate Banana,Food,35000,120,"Frozen chocolate banana (piscok) with melted chocolate, just fry and eat.",Fun Snacks,4.7,480,https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?w=400&h=400&fit=crop
+PROD083,Knit Inner Ciput,Clothing,10000,500,"Ciput (hijab inner) made from knit fabric, anti-headache and comfortable.",Hijab Style,4.8,2100,https://images.unsplash.com/photo-1583391733956-6c78276477e1?w=400&h=400&fit=crop
+PROD084,Matcha Latte Powder,Beverage,75000,75,"Premium matcha latte powder imported from Japan, authentic taste.",Nusantara Coffee,4.7,200,https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=400&fit=crop
+PROD085,Instant Corn Vermicelli,Food,15000,180,"Vermicelli made from corn starch, healthier and chewier.",Always Healthy,4.5,160,https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=400&fit=crop
+PROD086,Men's Plain White Shirt,Clothing,145000,90,"Plain white long-sleeve shirt made from oxford cotton, for work/formal occasions.",Urban Male,4.6,310,https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=400&fit=crop
+PROD087,VCO Coconut Oil 250ml,Beverage,55000,80,"Pure Virgin Coconut Oil (VCO), can be consumed or used for skin care.",Always Healthy,4.9,350,https://images.unsplash.com/photo-1571197776993-b9eeb81df333?w=400&h=400&fit=crop
+PROD088,Original Crispy Chicken Intestines,Food,21000,200,"Crispy fried chicken intestine snacks with original savory flavor.",Grandma's Kitchen,4.6,450,https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?w=400&h=400&fit=crop
+PROD089,Plain Baseball Cap,Clothing,45000,210,"Unisex baseball cap made from cotton twill with metal back adjuster.",Basic Wear,4.7,750,https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop
+PROD090,Instant Bir Pletok Powder,Beverage,30000,100,"Traditional Betawi body-warming drink, halal without alcohol.",Herbal Health,4.7,150,https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=400&fit=crop
+PROD091,Dried Shrimp Spring Rolls,Food,25000,150,"Mini dried spring roll snacks filled with ebi (dried shrimp).",Fun Snacks,4.7,380,https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=400&fit=crop
+PROD092,Men's Long Cargo Pants,Clothing,195000,80,"Multi-pocket cargo pants made from ripstop fabric, durable for outdoor activities.",Urban Male,4.6,280,https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=400&fit=crop
+PROD093,Pure Cocoa Powder,Beverage,45000,95,"Pure cocoa powder without sugar, perfect for making cakes.",Mom's Cake Shop,4.8,240,https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=400&fit=crop
+PROD094,Chocolate Hazelnut Spread,Food,65000,70,"Bread spread with chocolate and hazelnut flavor, imported.",Fruitastic,4.8,320,https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&h=400&fit=crop
+PROD095,Women's Casual Jumpsuit,Clothing,165000,75,"Jumpsuit made from cotton rayon, cool and comfortable for hanging out.",Fashionista,4.5,210,https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=400&fit=crop
+PROD096,Ginger Coffee (Kojima),Beverage,38000,110,"Combination of coffee, ginger, and honey in one instant drink.",Herbal Health,4.6,180,https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=400&fit=crop
+PROD097,Premium Cheese Pineapple Tarts,Food,95000,50,"Pineapple tart cookies with real pineapple filling and edam cheese topping.",Mom's Cake Shop,4.9,160,https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=400&fit=crop
+PROD098,Women's Knit Vest,Clothing,85000,130,"V-neck knit vest in crop style, perfect to pair with shirts.",Fashionista,4.7,410,https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop
+PROD099,Chocolate Nut Granola,Food,70000,85,"Granola cereal with oats, nuts, and chocolate mix.",Always Healthy,4.8,290,https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?w=400&h=400&fit=crop
+PROD100,Alkaline Mineral Water pH 8+,Beverage,12000,150,"Mineral water with alkaline pH (basic), good for neutralizing body acid.",Always Healthy,4.7,110,https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=400&h=400&fit=crop

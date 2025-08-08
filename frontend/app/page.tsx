@@ -1,4 +1,5 @@
 import ProductCard from '@/components/ProductCard';
+import SearchContainer from '@/components/SearchContainer';
 
 // Definisikan tipe data untuk API response kita
 type Product = {
@@ -44,11 +45,15 @@ export default async function HomePage() {
   return (
     <main className="container mx-auto p-4 md:p-8">
       <header className="text-center mb-12">
-        <h1 className="text-5xl font-extrabold tracking-tight">REVOSTYLE</h1>
-        <p className="mt-2 text-lg text-gray-600">Temukan Gaya Anda dengan Pencarian Cerdas</p>
+        <h1 className="text-5xl font-extrabold tracking-tight">FASHONG</h1>
+        <p className="mt-2 text-lg text-gray-600">Lets find your style with AI.</p>
       </header>
 
       {/* Nanti di sini kita letakkan komponen pencarian */}
+
+      <SearchContainer />
+
+      <hr className="my-12" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (

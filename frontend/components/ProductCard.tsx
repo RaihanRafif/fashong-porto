@@ -13,7 +13,6 @@ type Product = {
 };
 
 export default function ProductCard({ product }: { product: Product }) {
-    console.log(product)
   return (
     <Link href={`/products/${product.id}`} className="group block border rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
       <div className="relative w-full h-64">
