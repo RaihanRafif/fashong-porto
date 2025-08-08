@@ -50,7 +50,7 @@ export default function ShoppingAssistant() {
 
   useEffect(() => {
     setMessages([
-      { id: 1, text: "Hi! I'm Revo, your personal shopping assistant. How can I help you ?", sender: 'bot' }
+      { id: 1, text: "Hi! I'm FASHONGMAN, your personal shopping assistant. How can I help you ?", sender: 'bot' }
     ]);
   }, []);
 
@@ -118,7 +118,7 @@ export default function ShoppingAssistant() {
       {/* JENDELA CHAT (UI tidak berubah banyak) */}
       <div className={`fixed bottom-24 right-5 z-40 w-full max-w-sm rounded-xl bg-white shadow-2xl transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
         <div className="flex items-center justify-between p-4 border-b bg-slate-50 rounded-t-xl">
-          <h3 className="text-lg font-semibold">Revo Assistant</h3>
+          <h3 className="text-lg font-semibold">FASHONG Assistant</h3>
           <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-gray-600">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
           </button>
@@ -145,7 +145,7 @@ export default function ShoppingAssistant() {
           {isLoading && (
             <div className="flex items-end gap-2 justify-start">
               <div className="max-w-xs rounded-2xl px-4 py-2 bg-gray-200 text-gray-800 rounded-bl-none">
-                <p className="text-sm animate-pulse">Revo is thinking...</p>
+                <p className="text-sm animate-pulse">FASHONGMAN is thinking...</p>
               </div>
             </div>
           )}
