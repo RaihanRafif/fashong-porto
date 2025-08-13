@@ -13,6 +13,8 @@ const embeddingModel = "text-embedding-3-small";
 
 const getAllProducts = async (req, res) => {
     try {
+        console.log("2222");
+        
         // Ambil parameter 'page' dan 'limit' dari query string URL
         // Contoh: /api/products?page=2&limit=12
         const page = parseInt(req.query.page) || 1;

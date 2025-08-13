@@ -6,6 +6,10 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 
+console.log("333");
+
+
+
 const { getAllProducts, semanticSearch, visualSearch, getProductById, aiStylist, aiChatHandler } = require('../controllers/productController');
 
 // const { getAllProducts, getProductById } = require('../controllers/productController');

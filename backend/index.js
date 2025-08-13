@@ -18,13 +18,17 @@ app.use(cors());
 //    Mengizinkan server untuk menerima dan memahami data dalam format JSON dari request body.
 app.use(express.json());
 
+
+console.log("1111");
+
+
 // --- Rute API ---
 // Semua rute yang dimulai dengan /api akan diarahkan ke file productRoutes.js
-app.use('/api', router);
+app.use('/api-fashong', router);
 
 // --- Menjalankan Server ---
 // Ambil port dari environment variable, atau gunakan port 8000 sebagai default
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3004;
 
 app.listen(PORT, () => {
   console.log(`🚀 Server berjalan dengan mulus di http://localhost:${PORT}`);
