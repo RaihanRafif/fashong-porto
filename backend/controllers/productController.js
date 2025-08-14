@@ -1,10 +1,12 @@
-// ... (fungsi lain yang sudah ada seperti getAllProducts)
+// Impor model Sequelize dan Operator
+const { Product, Category } = require('../models');
+const { Op } = require('sequelize');
 
-// Inisialisasi OpenAI dan Pinecone di atas file controller
+require('dotenv').config(); // Memuat semua variabel dari file .env 
+
+// Inisialisasi OpenAI dan Pinecone tetap sama
 const { OpenAI } = require('openai');
 const { Pinecone } = require('@pinecone-database/pinecone');
-const { PrismaClient } = require('../generated/prisma');
-const prisma = new PrismaClient();
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const pinecone = new Pinecone({ apiKey: process.env.PINECONE_API_KEY });
@@ -13,44 +15,69 @@ const embeddingModel = "text-embedding-3-small";
 
 const getAllProducts = async (req, res) => {
     try {
-        console.log("2222");
-        
-        // Ambil parameter 'page' dan 'limit' dari query string URL
-        // Contoh: /api/products?page=2&limit=12
+        console.log("Starting getAllProducts with Sequelize...");
+
         const page = parseInt(req.query.page) || 1;
-        const limit = parseInt(req.query.limit) || 12; // Tampilkan 12 produk per halaman
+        const limit = parseInt(req.query.limit) || 12;
+        const offset = (page - 1) * limit; // Sequelize menggunakan 'offset' bukan 'skip'
 
-        // Hitung berapa produk yang harus dilewati (offset)
-        const skip = (page - 1) * limit;
+        console.log(`Fetching products - Page: ${page}, Limit: ${limit}, Offset: ${offset}`);
 
-        // Ambil data produk untuk halaman saat ini DAN total jumlah semua produk
-        // Kita jalankan keduanya secara paralel untuk efisiensi
-        const [products, totalProducts] = await prisma.$transaction([
-            prisma.product.findMany({
-                skip: skip,
-                take: limit,
-                include: {
-                    category: true, // Sertakan data kategori
-                },
-                orderBy: {
-                    createdAt: 'desc', // Tampilkan produk terbaru lebih dulu
-                },
-            }),
-            prisma.product.count(), // Hitung total semua produk
-        ]);
+        // Menggunakan findAndCountAll untuk mendapatkan data dan total dalam satu query
+        const { count, rows } = await Product.findAndCountAll({
+            limit: limit,
+            offset: offset,
+            include: [{
+                model: Category,
+                as: 'category',
+            }],
+            order: [
+                ['createdAt', 'DESC'] // Sintaks order di Sequelize
+            ],
+            distinct: true, // Penting untuk count yang akurat saat menggunakan include
+        });
 
-        // Kirim respons dalam format yang rapi
+        console.log(`✅ Found ${rows.length} products, Total: ${count}`);
+
         res.status(200).json({
-            data: products,
+            data: rows,
             pagination: {
-                totalProducts: totalProducts,
-                totalPages: Math.ceil(totalProducts / limit),
+                totalProducts: count,
+                totalPages: Math.ceil(count / limit),
                 currentPage: page,
                 limit: limit,
             },
         });
+
     } catch (error) {
-        console.error("Error saat mengambil produk:", error);
+        console.error("❌ Error in getAllProducts:", error);
+        res.status(500).json({
+            message: "Terjadi kesalahan pada server.",
+            error: process.env.NODE_ENV === 'development' ? error.message : undefined
+        });
+    }
+};
+
+const getProductById = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        // Menggunakan findByPk (Find by Primary Key) di Sequelize
+        const product = await Product.findByPk(id, {
+            include: [{
+                model: Category,
+                as: 'category',
+            }],
+        });
+
+        if (!product) {
+            return res.status(404).json({ message: 'Produk tidak ditemukan.' });
+        }
+
+        res.status(200).json(product);
+
+    } catch (error) {
+        console.error("Error saat mengambil produk by ID:", error);
         res.status(500).json({ message: "Terjadi kesalahan pada server." });
     }
 };
@@ -63,43 +90,32 @@ const semanticSearch = async (req, res) => {
             return res.status(400).json({ message: "Query pencarian tidak boleh kosong." });
         }
 
-        // 1. Buat embedding untuk query dari pengguna
+        // 1. & 2. Logika OpenAI & Pinecone tidak berubah
         const embeddingResponse = await openai.embeddings.create({
-            model: embeddingModel,
-            input: query,
-            dimensions: 1024,
+            model: embeddingModel, input: query, dimensions: 1024,
         });
         const queryVector = embeddingResponse.data[0].embedding;
-
-        // 2. Cari vektor yang paling mirip di Pinecone
         const searchResults = await pineconeIndex.query({
-            vector: queryVector,
-            topK: 12, // Ambil 12 hasil teratas
+            vector: queryVector, topK: 12,
         });
 
-        // 3. Ambil ID produk dari hasil pencarian Pinecone
         const productIds = searchResults.matches.map(match => match.id);
+        if (productIds.length === 0) return res.json([]);
 
-        if (productIds.length === 0) {
-            return res.json([]);
-        }
-
-        // 4. Ambil detail produk lengkap dari database SQL menggunakan ID tersebut
-        const productsFromDb = await prisma.product.findMany({
+        // 4. Ambil detail produk dari DB menggunakan Sequelize
+        const productsFromDb = await Product.findAll({
             where: {
                 id: {
-                    in: productIds,
+                    [Op.in]: productIds, // Menggunakan Operator 'in'
                 },
             },
-            include: {
-                category: true,
-            },
+            include: [{ model: Category, as: 'category' }],
         });
 
-        // 5. PENTING: Urutkan kembali hasil dari DB sesuai urutan relevansi dari Pinecone
+        // 5. Urutkan kembali hasil (logika ini tidak berubah)
         const sortedProducts = productIds.map(id =>
             productsFromDb.find(p => p.id === id)
-        ).filter(p => p); // Filter out any undefined results if a product was deleted
+        ).filter(p => p);
 
         res.json(sortedProducts);
 
@@ -112,16 +128,17 @@ const semanticSearch = async (req, res) => {
 const aiStylist = async (req, res) => {
     try {
         const { id } = req.params;
-        const product = await prisma.product.findUnique({
-            where: { id },
-            include: { category: true },
+        // Mengambil data produk menggunakan Sequelize
+        const product = await Product.findByPk(id, {
+            include: [{ model: Category, as: 'category' }],
         });
 
         if (!product) {
             return res.status(404).json({ message: "Produk tidak ditemukan." });
         }
 
-        // Ini adalah 'seni'-nya: membuat prompt yang bagus
+        // Sisa logika untuk membuat prompt dan memanggil OpenAI tidak berubah.
+        // Struktur objek `product.category.name` akan tetap sama.
         const prompt = `
         You are a creative and helpful fashion stylist.
         Given the following main product:
@@ -152,7 +169,6 @@ const aiStylist = async (req, res) => {
         const response = await openai.chat.completions.create({
             model: "gpt-4o",
             messages: [{ role: "user", content: prompt }],
-            // Memaksa output menjadi format JSON yang valid
             response_format: { type: "json_object" },
         });
 
@@ -166,11 +182,9 @@ const aiStylist = async (req, res) => {
 };
 
 const visualSearch = async (req, res) => {
-    // Pastikan file sudah diunggah
     if (!req.file) {
         return res.status(400).json({ message: 'Tidak ada gambar yang diunggah.' });
     }
-
     try {
         console.log("Memulai pencarian visual...");
 
@@ -200,9 +214,9 @@ const visualSearch = async (req, res) => {
         const imageDescription = visionResponse.choices[0].message.content;
         console.log("Deskripsi dari AI:", imageDescription);
 
-        // 3. Gunakan deskripsi tersebut untuk melakukan pencarian semantik (logika yang sama seperti sebelumnya)
+        // 3. Gunakan deskripsi tersebut untuk melakukan pencarian semantik
         const embeddingResponse = await openai.embeddings.create({
-            model: embeddingModel, // "text-embedding-3-small"
+            model: embeddingModel,
             input: imageDescription,
             dimensions: 1024,
         });
@@ -216,13 +230,13 @@ const visualSearch = async (req, res) => {
         const productIds = searchResults.matches.map(match => match.id);
         if (productIds.length === 0) return res.json([]);
 
-        const productsFromDb = await prisma.product.findMany({
-            where: { id: { in: productIds } },
-            include: { category: true },
+        // Mengambil data produk dari DB menggunakan Sequelize
+        const productsFromDb = await Product.findAll({
+            where: { id: { [Op.in]: productIds } },
+            include: [{ model: Category, as: 'category' }],
         });
 
         const sortedProducts = productIds.map(id => productsFromDb.find(p => p.id === id)).filter(p => p);
-
         res.json(sortedProducts);
 
     } catch (error) {
@@ -231,48 +245,16 @@ const visualSearch = async (req, res) => {
     }
 };
 
-const getProductById = async (req, res) => {
-    try {
-        // 1. Ambil ID dari parameter URL (misal: /api/products/clxyz123)
-        const { id } = req.params;
-
-        // 2. Cari produk di database menggunakan `findUnique` dari Prisma
-        const product = await prisma.product.findUnique({
-            where: {
-                id: id, // Cari berdasarkan ID yang diberikan
-            },
-            include: {
-                category: true, // Selalu sertakan data relasi yang relevan
-            },
-        });
-
-        // 3. Jika produk tidak ditemukan, kirim respons 404 (Not Found)
-        if (!product) {
-            return res.status(404).json({ message: 'Produk tidak ditemukan.' });
-        }
-
-        // 4. Jika produk ditemukan, kirim datanya dengan status 200 (OK)
-        res.status(200).json(product);
-
-    } catch (error) {
-        // 5. Tangani kemungkinan error server lainnya
-        console.error("Error saat mengambil produk by ID:", error);
-        res.status(500).json({ message: "Terjadi kesalahan pada server." });
-    }
-};
-
 const aiChatHandler = async (req, res) => {
     try {
-        // 1. TERIMA SELURUH RIWAYAT PERCAKAPAN
         const { history } = req.body;
         if (!history || history.length === 0) {
             return res.status(400).json({ reply: "History cannot be empty." });
         }
 
-        // Ambil pesan terakhir dari pengguna untuk proses Retrieval
         const latestUserMessage = history[history.length - 1].text;
 
-        // --- RETRIEVAL PHASE (Tetap menggunakan pesan terakhir) ---
+        // --- RETRIEVAL PHASE ---
         console.log(`[RAG] 1. Retrieval: Mencari konteks untuk query "${latestUserMessage}"`);
         const queryEmbedding = await openai.embeddings.create({
             model: embeddingModel,
@@ -290,8 +272,9 @@ const aiChatHandler = async (req, res) => {
 
         let contextText = "No relevant products found in the store for the latest user query.";
         if (productIds.length > 0) {
-            const relevantProducts = await prisma.product.findMany({
-                where: { id: { in: productIds } },
+            // Mengambil data produk dari DB menggunakan Sequelize
+            const relevantProducts = await Product.findAll({
+                where: { id: { [Op.in]: productIds } },
             });
             contextText = relevantProducts.map((p, i) =>
                 `Product ${i + 1}:\nID: ${p.id}\nName: ${p.name}\nDescription: ${p.description}\nPrice: ${p.price}\n`
@@ -299,10 +282,9 @@ const aiChatHandler = async (req, res) => {
         }
         console.log(`[RAG] 1. Retrieval: Konteks ditemukan:\n${contextText}`);
 
-        // --- AUGMENTATION & GENERATION PHASE (Prompt Diperbarui dengan Riwayat) ---
+        // --- AUGMENTATION & GENERATION PHASE ---
         console.log("[RAG] 2. & 3.: Membuat prompt dengan riwayat dan memanggil LLM...");
 
-        // Format riwayat chat untuk dimasukkan ke dalam prompt
         const formattedHistory = history.map(msg => `${msg.sender === 'user' ? 'User' : 'Revo'}: ${msg.text}`).join('\n');
 
         const prompt = `
@@ -340,6 +322,9 @@ const aiChatHandler = async (req, res) => {
         const aiJsonResponse = JSON.parse(completion.choices[0].message.content);
         console.log(`[RAG] 3. Generation: Jawaban JSON dari AI:`, aiJsonResponse);
 
+        console.log("11111 : ",aiJsonResponse);
+        
+        
         res.json({
             reply: aiJsonResponse.responseText,
             productIds: aiJsonResponse.recommendedProductIds || []
@@ -350,7 +335,6 @@ const aiChatHandler = async (req, res) => {
         res.status(500).json({ reply: "Sorry, I'm having trouble thinking right now.", productIds: [] });
     }
 };
-
 
 module.exports = {
     getAllProducts,

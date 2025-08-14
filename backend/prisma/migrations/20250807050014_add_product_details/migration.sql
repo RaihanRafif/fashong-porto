@@ -1,5 +1,0 @@
--- AlterTable
-ALTER TABLE "public"."Product" ADD COLUMN     "rating" DOUBLE PRECISION NOT NULL DEFAULT 0.0,
-ADD COLUMN     "reviewsCount" INTEGER NOT NULL DEFAULT 0,
-ADD COLUMN     "shopName" TEXT,
-ADD COLUMN     "stock" INTEGER NOT NULL DEFAULT 0;
